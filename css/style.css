@@ -28,6 +28,7 @@
 
 body {
     font-family: var(--Open-Sans);
+    margin: 0;
 }
 
 a {
@@ -47,6 +48,8 @@ a {
 .header {
     justify-content: center;
     box-shadow: var(--gray29) 0 3px 6px;
+    height: 70px;
+    width: 100vw;
 }
 
 .header__container {
@@ -61,12 +64,21 @@ a {
     color: var(--blueE4);
     font-size: 2rem;
     font-weight: var(--light);
-    margin: 19px 0 19px 136px;
 }
 
 .header__nav {
     display: flex;
 }
+
+.nav__element {
+    padding: 0 26px;
+}
+
+.nav__element:last-child {
+    padding-right: 0;
+}
+
+ul {list-style-type: none;}
 
 .nav__link {
     color: var(--grayA5);
@@ -75,17 +87,13 @@ a {
     letter-spacing: 0.18px;
     text-transform: uppercase;
     Border-bottom: 4px solid transparent;
-    padding: 28px 18px 22px;
+    padding: 28px 18px 23px;
     list-style-type: none;
 }
 
 .nav__link:hover {
     color: var(--black);
     border-color: var(--blueE4);
-}
-
-.nav__element {
-    padding: 0 26px;
 }
 
 .opening__image {
@@ -111,6 +119,7 @@ a {
     font-size: 3.06rem;
     font-weight: var(--normal);
     padding: 130px 0 0 0;
+    margin: 0;
 }
 
 .opening__heading {
@@ -152,73 +161,76 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
-h2 {
+.statistics__header {
     text-align: center;
     font-family: var(--Raleway);
+    font-weight: var(--normal);
     font-size: 2.25rem;
     padding: 100px 0;
+    margin: 0 auto;
 }
 
 .statistics__container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 800px;
     align-self: center;
+    margin: 0 auto;
 }
 
 .statistics__single {
     max-width: 175px;
+    height: 314px;
+    margin: 0 70px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 0 70px;
 }
 
-.statistics__img {
+.statistics__circle {
     background-color: var(--ruby64);
     border-radius: 50%;
     width: 62px;
     height: 62px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.statistics__img-ruby svg:last-child {
-    position: absolute;
-    left: 30px;
-}
-
-.statistics__img-blue {
+.statistics__circle--blue {
     background-color: var(--blueE4);
 }
 
-.statistics__img-blue svg:last-child {
-    position: absolute;
-    left: 21px;
-}
-
-.statistics__img-green {
+.statistics__circle--green {
     background-color: var(--green);
 }
 
-.statistics__img-green svg:last-child {
+.statistics__img {
+    content: "";
     position: absolute;
-    left: 30px;
+    top: 7px;
+    left: 32px;
+}
+
+.statistics__img-blue {
+    left: 10px;
+}
+
+.statistics__img-green {
+    top: 4px;
+    left: 15px;
 }
 
 .statistics__number {
     font-family: var(--Raleway);
     font-weight: var(--extra-bold);
+    text-align: center;
     font-size: 1.25rem;
     color: black;
     letter-spacing: 6px;
-    padding: 13px 0 19px;
+    padding: 15px 0 19px;
+    margin: 0;
 }
 
 .statistics__description {
@@ -227,6 +239,7 @@ h2 {
     font-size: 1.06rem;
     color: var(--grayA5);
     padding-bottom: 121px;
+    text-align: center;
 }
 
 .benefits {
@@ -267,10 +280,12 @@ h2 {
     padding-bottom: 50px;
     width: 416px;
     line-height: 1.4;
+    margin-bottom: 0;
 }
 
 .block-1-paragraph {
     margin-left: 35px;
+    margin-bottom: 0
 }
 
 .block-1 {
@@ -540,7 +555,6 @@ h2 {
     top: 2px;
     left: -14px;
     display: inline-block;
-    background-image: url("/images/Checkmark.svg");
 }
 
 .box-basic-list:last-child::before, .box-basic-list:nth-of-type(4)::before, .box-professional-list:last-child::before {
@@ -551,7 +565,6 @@ h2 {
     top: 2px;
     left: -14px;
     display: inline-block;
-    background-image: url("/images/Close.svg");
 }
 
 .contact__container {
@@ -584,23 +597,21 @@ h2 {
 }
 
 .contact__mail::before {
-    content: url("/images/Mail Icon.svg");
+    content: "";
     position: absolute;
     width: 10px;
     height: 10px;
     top: 6px;
     left: -1px;
-    background-color: var(--gray70);
 }
 
 .contact__phone::before {
-    content: url("/images/Phone Icon.svg");
+    content: "";
     position: absolute;
     width: 10px;
     height: 10px;
     top: 6px;
     left: -1px;
-    background-color: var(--gray70);
 }
 
 .form {
