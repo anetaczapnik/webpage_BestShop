@@ -60,6 +60,7 @@
                         <img src="images/Catalog.svg" alt="person" class="statistics__img-green statistics__img"/></div></div>
                 <h3 class="statistics__number">10000+</h3>
                 <p class="statistics__description">added posts daily</p>
+            </div>
         </div>
     </div>
 </section>
@@ -108,21 +109,21 @@
         <h2 class="pricing__title">Pricing</h2>
         <div class="pricing-boxes">
             <div class="box-basic box">
-                <div class="pricing__details">>
+                <div class="pricing__details">
                     <div class="box-basic-title box-title">Basic</div>
                     <div class="box-basic-number box-number">$0</div>
                 </div>
                 <ul class="pricing__items">
-                    <li class="pricing__item">100 MB HDD</li>
-                    <li class="pricing__item">1 Subdomain</li>
-                    <li class="pricing__item">2 E-mails</li>
-                    <li class="pricing__item">Two years license</li>
-                    <li class="pricing__item">Full support</li>
+                    <li class="box-basic-list">100 MB HDD</li>
+                    <li class="box-basic-list">1 Subdomain</li>
+                    <li class="box-basic-list">2 E-mails</li>
+                    <li class="box-basic-list list-not">Two years license</li>
+                    <li class="box-basic-list list-not">Full support</li>
                 </ul>
-                <a href="#" class="btn btn--primary">Begin</a>
+                <a href="#" class="btn btn--primary btn--basic">Begin</a>
             </div>
             <div class="box-professional box">
-                <div class="pricing__details">>
+                <div class="pricing__details">
                     <div class="box-professional-title box-title">Professional</div>
                     <div class="box-professional-number box-number">$25</div>
                     <div class="box-professional-subtitle box-subtitle">Limited offer</div>
@@ -132,12 +133,12 @@
                     <li class="box-professional-list">2 Subdomains</li>
                     <li class="box-professional-list">5 E-mails</li>
                     <li class="box-professional-list">One year license</li>
-                    <li class="box-professional-list">Full support</li>
+                    <li class="box-professional-list list-not">Full support</li>
                 </ul>
-                <a href="#" class="btn btn--primary">Begin</a>
+                <a href="#" class="btn btn--primary btn--professional">Begin</a>
             </div>
             <div class="box-premium box">
-                <div class="pricing__details">>
+                <div class="pricing__details">
                     <div class="box-premium-title box-title">Premium</div>
                     <div class="box-premium-number box-number">$60</div>
                     <div class="box-professional-subtitle box-subtitle">Limited offer</div>
@@ -149,7 +150,7 @@
                     <li class="box-premium-list">Two years license</li>
                     <li class="box-premium-list">Full support</li>
                 </ul>
-                <a href="#" class="btn btn--primary">Begin</a>
+                <a href="#" class="btn btn--primary btn--premium">Begin</a>
             </div>
         </div>
     </div>
@@ -171,26 +172,31 @@
                 </a>
             </div>
         </div>
-        <div class="form">
-            <form>
+
+        <div class="form__container">
+            <form class="form">
                 <div class="form__field">
                     <label class="form__label" for="name">Name</label>
                     <input type="text" class="form__input name" id="name">
                 </div>
 
                 <div class="form__field">
-                    <label class="form__label" for="email"></label>
+                    <label class="form__label" for="email">Email</label>
                     <input type="email" class="form__input email" id="email">
                 </div>
 
-                <div class="form__checkbox">
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        <span></span>
-                        <p class="checkbox__text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive</p>
+                <div class="form__consent">
+                    <label class="form__checkbox">
+                        <input type="checkbox"/>
+                        <span class="checkbox"></span>
+                        <p class="consent__text">
+                        I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive
                     </label>
                 </div>
-                <button class="form-btn" type="submit">Send</button>
+
+                <div class="div__form-btn">
+                    <button class="form-btn" type="submit">Send</button>
+                </div>
             </form>
         </div>
     </div>
@@ -203,8 +209,8 @@
             <p class="footer__text">© 2019 BestShop LTD, All Rights Reserved</p>
         </div>
         <div class="footer__icons">
-            <a href="#"><img src="images/Twitter.svg" alt="twitter"/></a>
-            <a href="#"><img src="images/Facebook.svg" alt="facebook"/></a>
+            <a href="#"><img src="images/Twitter.svg" alt="twitter" class="footer__icon"/></a>
+            <a href="#"><img src="images/Facebook.svg" alt="facebook" class="footer__icon"/></a>
         </div>
     </div>
 </section>

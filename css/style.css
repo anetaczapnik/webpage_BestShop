@@ -262,6 +262,7 @@ ul {list-style-type: none;}
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 }
 
 .block-title {
@@ -269,10 +270,12 @@ ul {list-style-type: none;}
     font-size: 2.25rem;
     color: var(--black);
     padding-bottom: 36px;
+    margin: 0;
 }
 
 .block-1-title {
     margin-left: 35px;
+    font-weight: var(--normal);
 }
 
 .block-paragraph {
@@ -280,7 +283,7 @@ ul {list-style-type: none;}
     padding-bottom: 50px;
     width: 416px;
     line-height: 1.4;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .block-1-paragraph {
@@ -365,6 +368,7 @@ ul {list-style-type: none;}
 }
 
 .block-2-title {
+    font-weight: var(--normal);
     padding-right: 190px;
 }
 
@@ -381,10 +385,12 @@ ul {list-style-type: none;}
 .block-3-text {
     width: 624px;
     padding-left: 36px;
+    margin: 0;
 }
 
 .block-3-title {
-    margin-top: 70px;
+    font-weight: var(--normal);
+    margin: 0;
 }
 
 .block-3-underline {
@@ -431,6 +437,8 @@ ul {list-style-type: none;}
     font-family: var(--Raleway);
     font-size: 2.25rem;
     padding: 100px 0 50px;
+    margin: 0;
+    font-weight: var(--normal);
 }
 
 .box {
@@ -448,6 +456,7 @@ ul {list-style-type: none;}
 .box-title {
     font-family: var(--Raleway);
     font-size: 1.25rem;
+    text-align: center;
     color: var(--denim);
     margin: 34px 0 30px;
     font-weight: var(--bold);
@@ -455,14 +464,23 @@ ul {list-style-type: none;}
 
 .box-subtitle {
     padding-bottom: 60px;
+    font-weight: var(--bold);
+    text-align: center;
 }
 
 .box-number {
     font-family: var(--Open-Sans);
     font-size: 2.87rem;
+    text-align: center;
+    font-weight: var(--light);
     color: var(--ruby64);
     margin-bottom: 69px;
-    font-weight: var(--normal);
+}
+
+.pricing__items {
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .box-basic-list, .box-premium-list, .box-professional-list {
@@ -471,23 +489,21 @@ ul {list-style-type: none;}
     color: var(--black);
     padding-bottom: 20px;
     position: relative;
+    margin: 0;
+    text-align: center;
 }
 
-.box-basic::after {
-    content: "Begin";
-    width: 150px;
-    height: 50px;
-    border-radius: 23px;
-    background-color: var(--ruby6E);
-    color: var(--white);
-    font-size: 0.81rem;
-    font-weight: var(--bold);
-    font-family: var(--Open-Sans);
-    position: absolute;
-    top: 434px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.box-basic-list::before, .box-professional-list::before, .box-premium-list::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../images/Checkmark-1.svg");
+}
+
+.list-not::before {
+    background-image: url("../images/Close.svg");
 }
 
 .box-professional {
@@ -498,27 +514,10 @@ ul {list-style-type: none;}
     margin-top: 10px;
 }
 
-.box-professional::after {
-    content: "Begin";
-    width: 150px;
-    height: 50px;
-    border-radius: 23px;
-    background-color: var(--blueE6);
-    color: var(--white);
-    font-size: 0.81rem;
-    font-weight: var(--bold);
-    font-family: var(--Open-Sans);
-    position: absolute;
-    top: 475px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 10px 27px var(--babyblue);
-}
-
 .box-professional-number {
     color: var(--blueE6);
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .box-premium {
@@ -528,23 +527,7 @@ ul {list-style-type: none;}
 .box-premium-number {
     color: var(--green);
     margin-bottom: 5px;
-}
-
-.box-premium::after {
-    content: "Begin";
-    width: 150px;
-    height: 50px;
-    border-radius: 23px;
-    background-color: var(--green);
-    color: var(--white);
-    font-size: 0.81rem;
-    font-weight: var(--bold);
-    font-family: var(--Open-Sans);
-    position: absolute;
-    top: 434px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .box-basic-list::before, .box-professional-list::before, .box-premium-list::before {
@@ -567,9 +550,36 @@ ul {list-style-type: none;}
     display: inline-block;
 }
 
+.btn--basic {
+    background-color: var(--ruby6E);
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -22px;
+}
+
+.btn--professional {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -47px;
+}
+
+.btn--premium {
+    width: 150px;
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -9px;
+}
+
 .contact__container {
     display: flex;
-    width: 70%;
+    width: 896px;
+    justify-content: space-between;
 }
 
 .contact__title {
@@ -577,7 +587,7 @@ ul {list-style-type: none;}
     color: black;
     font-family: var(--Raleway);
     padding-bottom: 22px;
-    margin-right: 114px;
+    margin: 0;
 }
 
 .contact__text {
@@ -592,57 +602,68 @@ ul {list-style-type: none;}
     color: var(--grayA5);
     font-family: var(--Open-Sans);
     display: inline;
-    padding: 0 20px 0 15px;
+    padding: 0 20px 0 40px;
     position: relative;
 }
 
-.contact__mail::before {
-    content: "";
+.contact__mail img {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 6px;
     left: -1px;
+    top: -2px;
 }
 
-.contact__phone::before {
-    content: "";
+.contact__phone img {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 6px;
-    left: -1px;
+    left: 2px;
+    top: -2px;
+}
+
+.form__container {
+    width: 440px;
 }
 
 .form {
-    width: 60%;
-}
-
-form {
     display: flex;
     flex-direction: column;
 }
 
-label[for="text"], label[for="email"] {
+.form__field:first-of-type {
+    margin: 0 0 42px 0;
+}
+
+.form__label {
     font-size: 0.68rem;
     color: var(--blueE4);
     font-family: var(--Open-Sans);
     text-transform: uppercase;
     font-weight: bold;
+    line-height: 0.9rem;
+    letter-spacing: 3px;
 }
 
-label[for="email"] {
-    padding-top: 40px;
-}
-
-input[type="text"], input[type="email"] {
+.form__input {
     padding: 10px;
     box-sizing: border-box;
     border: 0;
     border-bottom: 1px solid var(--gray9A);
+    background-color: transparent;
+    width: 100%;
 }
 
-.checkbox input {
+.form__consent {
+    margin-top: 30px;
+}
+
+.form__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.375rem;
+}
+
+.form__checkbox input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -650,39 +671,37 @@ input[type="text"], input[type="email"] {
     width: 0;
 }
 
-.checkbox {
-    cursor: pointer;
-    display: flex;
-    margin: 30px 0 20px;
-}
-
-.checkbox span {
-    height: 24px;
-    flex-shrink: 0;
-    flex-basis: 24px;
-    border: 1px solid var(--gray9A);
+.form__checkbox .checkbox {
+    position: absolute;
+    top: 2px;
+    left: -2px;
+    height: 25px;
+    width: 25px;
+    background-color: var(--white);
+    border: 1px solid var(--grayA5);
     border-radius: 4px;
-    cursor: pointer;
-    margin-right: 15px;
 }
 
-.checkbox input:checked + span {
-    background-color: var(--blueE4);
+.form__checkbox input:checked ~ .checkbox {
+    background-image: url(../images/Checkmark.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 
-.checkbox p {
+.consent__text {
     font-size: 0.75rem;
     color: var(--gray70);
     font-family: var(--Open-Sans);
     line-height: 1.5;
 }
 
-.form-btn {
+.div__form-btn {
     display: flex;
     flex-direction: row-reverse;
 }
 
-button {
+.form-btn {
     width: 226px;
     height: 57px;
     font-size: 0.81rem;
@@ -698,12 +717,13 @@ button {
 .footer {
     width: 100%;
     box-shadow: var(--gray29) 0 -5px 40px;
+    background-color: var(--whiteF7);
 }
 
 .footer__container {
-    width: 100%;
+    width: 1352px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .footer__info {
@@ -716,6 +736,7 @@ button {
     color: var(--blueE4);
     font-family: var(--Raleway);
     padding-top: 21px;
+    margin: 0;
 }
 
 .footer__text {
@@ -724,6 +745,7 @@ button {
     font-family: var(--Open-Sans);
     padding-top: 6px;
     padding-bottom: 17px;
+    margin: 0;
 }
 
 .footer__icons {
@@ -731,6 +753,6 @@ button {
     align-self: center;
 }
 
-svg {
+.footer__icon {
     margin: 10px;
 }
