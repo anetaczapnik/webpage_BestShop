@@ -494,16 +494,15 @@ ul {list-style-type: none;}
 }
 
 .box-basic-list::before, .box-professional-list::before, .box-premium-list::before {
-    content: "";
+    content: url("../images/Ckechmark-1.svg");
     width: 11px;
     height: 11px;
-    display: inline-block;
+    position: absolute;
     margin-right: 10px;
-    background-image: url("../images/Checkmark-1.svg");
 }
 
 .list-not::before {
-    background-image: url("../images/Close.svg");
+    content: url("../images/Close.svg");
 }
 
 .box-professional {
@@ -529,7 +528,7 @@ ul {list-style-type: none;}
     margin-bottom: 5px;
     text-align: center;
 }
-
+/*
 .box-basic-list::before, .box-professional-list::before, .box-premium-list::before {
     content: "";
     width: 10px;
@@ -538,7 +537,7 @@ ul {list-style-type: none;}
     top: 2px;
     left: -14px;
     display: inline-block;
-}
+}*/
 
 .box-basic-list:last-child::before, .box-basic-list:nth-of-type(4)::before, .box-professional-list:last-child::before {
     content: "";
